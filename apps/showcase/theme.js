@@ -1,7 +1,9 @@
-// ==========================================================================
-// Project:   Showcase
-// Copyright: ©2011 My Company, Inc.
-// ==========================================================================
+/*!
+ * RaphaelWrapper Showcase project
+ *
+ * Copyright (c) 2011 Gabriele Genta (http://gabrielegenta.wordpress.com/)
+ * Licensed under the MIT license.
+ */
 /*globals Showcase */
 
 // This is the theme that defines how your app renders.
