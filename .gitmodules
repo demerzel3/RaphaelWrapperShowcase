@@ -1,0 +1,6 @@
+[submodule "frameworks/raphael_wrapper"]
+	path = frameworks/raphael_wrapper
+	url = https://github.com/demerzel3/RaphaelWrapper.git
+[submodule "frameworks/sproutcore"]
+	path = frameworks/sproutcore
+	url = https://github.com/sproutcore/sproutcore.git
