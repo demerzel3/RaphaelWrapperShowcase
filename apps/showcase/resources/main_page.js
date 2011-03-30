@@ -136,6 +136,55 @@ Showcase.mainPage = SC.Page.design({
         }
       });
     } else if ("group" === shapeType) {
+      var highlight = Raphael.Rect.create({
+        attrs: {
+          width: 260,
+          height: 45,
+          r: 10,
+          fill: "white",
+          "fill-opacity": 0.7,
+          "stroke-width": 2,
+          stroke: "black",
+          "stroke-opacity": 0.7
+        }
+      });
+      var border = Raphael.Rect.create({
+        attrs: {
+          width: 250,
+          height: 35,
+          r: 5,
+          x: 5,
+          y: 5,
+          fill: "270-hsb(%@1, 0.5, .80)-hsb(%@1, 0.5, .60)".fmt(hue),
+          "stroke-width": 2,
+          stroke: "hsb(%@1, 1, .10)".fmt(hue)
+        }
+      });
+      var captionShadow = Raphael.Text.create({
+        attrs: {
+          text: "Group Example",
+          "font-size": 30,
+          fill: "black",
+          "fill-opacity": 0.5,
+          x: 130,
+          y: 24.5
+        }
+      });
+      var caption = Raphael.Text.create({
+        attrs: {
+          text: "Group Example",
+          "font-size": 30,
+          fill: "white",
+          x: 130,
+          y: 22.5
+        }
+      });
+
+      shape = Raphael.Group.create();
+      shape.pushElement(highlight);
+      shape.pushElement(border);
+      shape.pushElement(captionShadow);
+      shape.pushElement(caption);
     }
 
     // apply additional styling
@@ -143,7 +192,7 @@ Showcase.mainPage = SC.Page.design({
       shape.attr({ fill: "270-hsb(%@1, .90, 1)-hsb(%@1, .60, 1)".fmt(hue) });
       if ("rect" === shapeType || "circle" === shapeType) {
         shape.attr({
-          stroke: "hsb(%@1, .25, 1)".fmt(hue),
+          stroke: "hsb(%@1, 1, .25)".fmt(hue),
           "stroke-width": Math.round(Math.random()*10)
         });
       }
